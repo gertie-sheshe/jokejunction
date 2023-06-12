@@ -1,0 +1,137 @@
+@import "@jokejunction/styles/theme.scss";
+
+.primaryLink {
+  text-underline-offset: 5px;
+  padding: 8px 12px;
+  font-weight: bold;
+}
+
+.primaryLinkDark {
+  @extend .primaryLink;
+  color: $accent-orange-light;
+}
+.primaryLinkLight {
+  @extend .primaryLink;
+  color: $primary;
+}
+
+.actionsContainer {
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  @include sm {
+    display: flex;
+  }
+
+  @include lg {
+    justify-content: flex-end;
+  }
+}
+
+.actionsContainerDark {
+  @extend .actionsContainer;
+  background-color: $accent-black-moderate;
+}
+
+.actionsContainerLight {
+  @extend .actionsContainer;
+  background-color: $secondary-light;
+}
+
+.labelDark {
+  color: $secondary;
+}
+
+.labelLight {
+  color: $primary;
+}
+
+.select {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  width: 100px;
+
+  @include lg {
+    margin-right: 40px;
+  }
+}
+
+.selectDark {
+  @extend .select;
+  background-color: $primary;
+  color: $secondary-light;
+}
+
+.selectLight {
+  @extend .select;
+  background-color: $tertiary;
+  color: $primary-dark;
+}
+
+.header {
+  text-align: center;
+  padding: 20px 0px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  @include sm {
+    flex: 1;
+  }
+
+  @include lg {
+    flex: 0 1 auto;
+    margin-right: 30px;
+  }
+}
+
+.tableWrapper {
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: $accent-black-moderate;
+  margin-top: 15px;
+}
+
+.actionButton {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+
+  @include sm {
+    flex: 1;
+    margin-top: 0;
+    align-items: center;
+  }
+
+  @include lg {
+    flex: 0 1 auto;
+  }
+}
+
+.labelText {
+  @extend .caption;
+  margin-bottom: 10px;
+
+  @include md {
+    font-size: 1rem;
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 30px 0px;
+}
+
+.srOnly {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
