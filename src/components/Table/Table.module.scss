@@ -1,0 +1,275 @@
+@import "@jokejunction/styles/theme.scss";
+
+.tableWrapper {
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-top: 15px;
+  min-height: 500px;
+
+  td {
+    padding: 10px 20px;
+  }
+
+  th {
+    text-align: left;
+    padding-left: 20px;
+  }
+}
+
+.tableWrapperDark {
+  @extend .tableWrapper;
+  background-color: $accent-black-moderate;
+  tbody {
+    tr:nth-child(even) {
+      background-color: $accent-black-moderate;
+    }
+
+    tr:nth-child(odd) {
+      background-color: $accent-black-primary;
+    }
+  }
+}
+
+.tableWrapperLight {
+  @extend .tableWrapper;
+  background-color: $secondary;
+  tbody {
+    tr:nth-child(even) {
+      background-color: $secondary;
+    }
+
+    tr:nth-child(odd) {
+      background-color: $secondary-light;
+    }
+  }
+}
+
+.tableCaption {
+  padding: 20px;
+  text-align: left;
+}
+
+.tableCaptionDark {
+  @extend .tableCaption;
+  background-color: $accent-black-mid;
+}
+
+.tableCaptionLight {
+  @extend .tableCaption;
+  background-color: $primary;
+  color: $tertiary-light;
+}
+
+.tableHead {
+  height: 80px;
+}
+
+.tableHeadDark {
+  @extend .tableHead;
+  background-color: $accent-black-dark;
+}
+.tableHeadLight {
+  @extend .tableHead;
+  background-color: $primary-dark;
+  color: $tertiary;
+}
+
+.dateDark {
+  color: $secondary;
+}
+
+.dateLight {
+  color: $primary;
+}
+
+.mobileDate {
+  @extend .caption;
+}
+
+.mobileDateDark {
+  @extend .mobileDate;
+  @extend .dateDark;
+}
+
+.mobileDateLight {
+  @extend .mobileDate;
+  @extend .dateLight;
+}
+
+.link {
+  text-underline-offset: 3px;
+}
+
+.linkDark {
+  @extend .link;
+  color: $accent-orange-light;
+}
+.linkLight {
+  @extend .link;
+  color: $primary-dark;
+}
+.label {
+  color: $secondary;
+}
+
+.mobileTitle {
+  @extend .h2;
+  font-weight: bold;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.mobileViews {
+  @extend .caption;
+}
+
+.views {
+  @extend .caption;
+}
+
+.viewsText {
+  padding: 5px 15px;
+  font-weight: bold;
+  border-radius: 25px;
+}
+
+.viewsTextGreen {
+  @extend .viewsText;
+  background-color: $accent-green-bright;
+  color: $accent-green-dark;
+  border: solid 1px $accent-green-deep;
+  opacity: 70%;
+}
+
+.viewsTextRed {
+  @extend .viewsText;
+  background-color: $accent-red-bright;
+  color: $accent-red-dark;
+  border: solid 2px $accent-red-deep;
+  opacity: 70%;
+}
+
+.viewsTextOrange {
+  @extend .viewsText;
+  background-color: $accent-orange-bright;
+  color: $accent-orange-dark;
+  border: solid 2px $accent-orange-deep;
+  opacity: 70%;
+}
+
+.viewsTextYellow {
+  @extend .viewsText;
+  background-color: $accent-yellow-bright;
+  color: $accent-yellow-dark;
+  border: solid 2px $accent-yellow-deep;
+  opacity: 70%;
+}
+
+.mobileTableHead {
+  display: none;
+}
+
+.mobileTableRow {
+  display: block;
+  padding: 20px;
+
+  td {
+    display: block;
+  }
+}
+
+.tableRow {
+  height: 80px;
+}
+
+.table {
+  width: 100%;
+  border-spacing: 0;
+  table-layout: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+.accessibleTable {
+  @extend .table;
+
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  @include sm {
+    flex: 1;
+  }
+
+  @include lg {
+    flex: 0 1 auto;
+    margin-right: 30px;
+  }
+}
+
+.actionsContainer {
+  padding: 10px;
+  border-radius: 4px;
+  // border: solid 1px black;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  // background-color: #3f3f3f;
+  background-color: $accent-black-moderate;
+
+  @include sm {
+    display: flex;
+  }
+
+  @include lg {
+    justify-content: flex-end;
+  }
+}
+
+.actionButton {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+
+  @include sm {
+    flex: 1;
+    margin-top: 0;
+    align-items: center;
+  }
+
+  @include lg {
+    flex: 0 1 auto;
+  }
+}
+
+.select {
+  padding: 8px 12px;
+  background-color: $primary;
+  border: none;
+  border-radius: 4px;
+  color: $secondary-light;
+  width: 100px;
+
+  @include lg {
+    margin-right: 40px;
+  }
+}
+
+.labelText {
+  @extend .caption;
+  margin-bottom: 10px;
+
+  @include md {
+    font-size: 1rem;
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin: 30px 0px;
+}
