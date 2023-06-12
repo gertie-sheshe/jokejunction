@@ -1,0 +1,117 @@
+{
+  "jokes": [
+    {
+      "title": "Road Trips",
+      "author": "melis@we.com",
+      "body": "This is a joke",
+      "views": 12,
+      "createdAt": 1623421317413,
+      "id": 1
+    },
+    {
+      "id": 3,
+      "title": "Safia Elhillo",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "author": "safia@we.com",
+      "views": 12,
+      "createdAt": 1670164409747
+    },
+    {
+      "id": 4,
+      "title": "Gilead Asante Sana",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "author": "gilead@we.com",
+      "views": 167,
+      "createdAt": 1388534400000
+    },
+    {
+      "id": 5,
+      "title": "Jane Smith",
+      "body": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "author": "jane@we.com",
+      "views": 7,
+      "createdAt": 1670164437890
+    },
+    {
+      "id": 6,
+      "title": "Mike Johnson",
+      "body": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "author": "mike@we.com",
+      "views": 25,
+      "createdAt": 1670164451234
+    },
+    {
+      "id": 7,
+      "title": "Emily Davis",
+      "body": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+      "author": "emily@we.com",
+      "views": 9,
+      "createdAt": 1623421317413
+    },
+    {
+      "id": 8,
+      "title": "David Wilson",
+      "body": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
+      "author": "david@we.com",
+      "views": 14,
+      "createdAt": 1670164479012
+    },
+    {
+      "id": 9,
+      "title": "Sophia Thompson",
+      "body": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+      "author": "sophia@we.com",
+      "views": 21,
+      "createdAt": 1623421317413
+    },
+    {
+      "id": 10,
+      "title": "Daniel Rodriguez",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "author": "daniel@we.com",
+      "views": 6,
+      "createdAt": 1670164505678
+    },
+    {
+      "id": 11,
+      "title": "Olivia Martinez",
+      "body": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "author": "olivia@we.com",
+      "views": 13,
+      "createdAt": 1670164519012
+    },
+    {
+      "id": 12,
+      "title": "Michael Brown",
+      "body": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "author": "michael@we.com",
+      "views": 8,
+      "createdAt": 1420070400000
+    },
+    {
+      "id": 13,
+      "title": "Emma Johnson",
+      "body": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "author": "emma@we.com",
+      "views": 19,
+      "createdAt": 1670164545678
+    },
+
+    {
+      "title": "Problem",
+      "author": "Threee",
+      "createdAt": 1686471164721,
+      "views": 100,
+      "id": 17,
+      "body": "Set the joke here in length"
+    },
+    {
+      "title": "sdsdfsds",
+      "author": "dssdasd",
+      "body": "asdmnasdkjnajdasdhas",
+      "createdAt": 1686488050190,
+      "views": 100,
+      "id": 23
+    }
+  ]
+}
