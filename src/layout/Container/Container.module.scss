@@ -1,0 +1,17 @@
+@import "@jokejunction/styles/theme.scss";
+
+.container {
+  padding: 0 15px;
+
+  @include sm {
+    padding: 0 20px;
+  }
+
+  @include md {
+    padding: 0 50px;
+  }
+
+  @include lg {
+    padding: 0 100px;
+  }
+}
