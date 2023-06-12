@@ -1,0 +1,197 @@
+$primary-dark: #212529;
+$primary: #343a40;
+$primary-light: #495057;
+
+$secondary-dark: #6c757d;
+$secondary: #adb5bd;
+$secondary-light: #ced4da;
+
+$tertiary-dark: #dee2e6;
+$tertiary: #e9ecef;
+$tertiary-light: #f8f9fa;
+
+// accent colors
+$accent-red-deep: #800000;
+$accent-red-dark: #ae0000;
+$accent-red-mid: #dc0000;
+$accent-red-primary: #ff0b0b;
+$accent-red-moderate: #ff3939;
+$accent-red-light: #ff6666;
+$accent-red-bright: #ff9494;
+
+$accent-yellow-deep: #553c10;
+$accent-yellow-dark: #7c5717;
+$accent-yellow-mid: #a2721f;
+$accent-yellow-primary: #c98d26;
+$accent-yellow-moderate: #dba342;
+$accent-yellow-light: #e3b668;
+$accent-yellow-bright: #eac88f;
+
+$accent-green-deep: #1a4008;
+$accent-green-dark: #208320;
+$accent-green-mid: #29a829;
+$accent-green-primary: #32cd32;
+$accent-green-moderate: #57d657;
+$accent-green-light: #7cdf7c;
+$accent-green-bright: #a1e3cc;
+
+$accent-orange-deep: #754c00;
+$accent-orange-dark: #a36a00;
+$accent-orange-mid: #d18700;
+$accent-orange-primary: #ffa500;
+$accent-orange-moderate: #ffb52e;
+$accent-orange-light: #ffc55c;
+$accent-orange-bright: #ffd68a;
+
+$accent-black-deep: #090c0f;
+$accent-black-dark: #0e1115;
+$accent-black-mid: #13171a;
+$accent-black-primary: #181c20;
+$accent-black-moderate: #1d2125;
+
+//tiger lill
+$one: #db8780;
+$two: #d1655c;
+$three: #c74338;
+
+// breakpoints
+$screen-sm-min: 768px;
+$screen-md-min: 1152px;
+$screen-lg-min: 1440px;
+$screen-xl-min: 1920px;
+// add more variables as needed
+
+// Breakpoints mixins
+@import "./mixins.scss";
+
+// Headings
+.h1 {
+  font-size: 1.38rem;
+  padding: 0;
+  margin: 0;
+
+  @include sm {
+    font-size: 1.8rem;
+  }
+
+  @include lg {
+    font-size: 3.05rem;
+  }
+}
+
+.h2 {
+  font-size: 1.29rem;
+  padding: 0;
+  margin: 0;
+
+  @include sm {
+    font-size: 1.6rem;
+  }
+
+  @include lg {
+    font-size: 2.4rem;
+  }
+}
+
+.h3 {
+  font-size: 1.21rem;
+  padding: 0;
+  margin: 0;
+
+  @include sm {
+    font-size: 1.42rem;
+  }
+
+  @include lg {
+    font-size: 1.9rem;
+  }
+}
+
+.caption {
+  font-size: 0.9rem;
+
+  @include sm {
+    font-size: 0.88rem;
+  }
+
+  @include lg {
+    font-size: 0.8rem;
+  }
+}
+
+.buttonBase {
+  padding: 12px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: inherit;
+  @include sm {
+    padding: 12px 50px;
+  }
+}
+
+.buttonPrimary {
+  @extend .buttonBase;
+  border: none;
+}
+
+.buttonPrimaryDark {
+  @extend .buttonPrimary;
+  background-color: $accent-orange-light;
+  color: $primary-dark;
+}
+
+.buttonPrimaryLight {
+  @extend .buttonPrimary;
+  background-color: $primary-dark;
+  color: $accent-orange-light;
+}
+
+.buttonSecondary {
+  @extend .buttonBase;
+}
+
+.buttonSecondaryDark {
+  @extend .buttonBase;
+  color: $accent-orange-light;
+  border: solid 1px $accent-orange-light;
+  background-color: $primary-dark;
+}
+
+.buttonSecondaryLight {
+  @extend .buttonBase;
+  color: $primary-dark;
+  border: solid 1px $primary-dark;
+  background-color: $secondary-light;
+}
+
+.buttonTertiary {
+  @extend .buttonBase;
+  background-color: $primary-dark;
+  color: $tertiary-light;
+  border: solid 1px $tertiary-light;
+}
+
+.buttonSecondary {
+  @extend .buttonBase;
+  color: $accent-orange-light;
+  border: solid 1px $accent-orange-light;
+  background-color: $primary-dark;
+}
+
+.buttonDangerPrimary {
+  @extend .buttonBase;
+  background-color: $accent-red-deep;
+  border: solid 1px $accent-red-dark;
+  color: $secondary;
+  font-weight: bold;
+}
+
+.buttonDangerPrimaryDark {
+  @extend .buttonDangerPrimary;
+  color: $secondary;
+}
+
+.buttonDangerPrimaryLight {
+  @extend .buttonDangerPrimary;
+  color: $tertiary;
+}

@@ -1,6 +1,17 @@
-import '@jokejunction/styles/globals.css'
-import type { AppProps } from 'next/app'
+import type { AppProps } from "next/app";
+import { Albert_Sans } from "next/font/google";
+
+const albertSans = Albert_Sans({
+  subsets: ["latin"],
+});
+
+import "@jokejunction/styles/globals.css";
+import "@jokejunction/styles/theme.scss";
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <div className={albertSans.className}>
+      <Component {...pageProps} />
+    </div>
+  );
 }

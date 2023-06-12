@@ -1,0 +1,18 @@
+@import "@jokejunction/styles/theme.scss";
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.containerDark {
+  @extend .container;
+  background-color: $primary-dark;
+  color: $tertiary-light;
+}
+
+.containerLight {
+  @extend .container;
+  background-color: $tertiary-dark;
+  color: $primary;
+}
