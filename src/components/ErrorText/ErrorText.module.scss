@@ -1,0 +1,16 @@
+@import "@jokejunction/styles/theme.scss";
+
+.errorText {
+  padding-top: 10px;
+  display: block;
+}
+
+.errorTextDark {
+  @extend .errorText;
+  color: $accent-red-moderate;
+}
+
+.errorTextLight {
+  @extend .errorText;
+  color: $accent-red-deep;
+}

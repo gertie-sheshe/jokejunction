@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Container from "@jokejunction/layout/Container/Container";
 import Page from "@jokejunction/layout/Page";
+import LoginView from "@jokejunction/views/LoginView/LoginView";
 
 export default function Home() {
   return (
@@ -13,7 +14,9 @@ export default function Home() {
       </Head>
       <Page>
         <main>
-          <Container>Helooo</Container>
+          <Container>
+            <LoginView />
+          </Container>
         </main>
       </Page>
     </>

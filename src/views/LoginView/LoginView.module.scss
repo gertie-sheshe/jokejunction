@@ -1,0 +1,115 @@
+@import "@jokejunction/styles/theme.scss";
+
+.mainContainer {
+  padding-top: 60px;
+  @include sm {
+    display: flex;
+    justify-content: center;
+  }
+  @include lg {
+    display: block;
+    justify-content: unset;
+    margin-top: 0;
+    padding-top: 20px;
+  }
+}
+
+.pageContainer {
+  display: flex;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px hsla(0, 0%, 0.8);
+
+  @include sm {
+    padding: 50px;
+    width: 600px;
+  }
+
+  @include lg {
+    height: 80vh;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px hsla(0, 0%, 0.8);
+    flex-direction: unset;
+    padding: 0;
+    width: auto;
+  }
+}
+
+.pageContainerDark {
+  @extend .pageContainer;
+  background-color: $primary-dark;
+}
+
+.pageContainerLight {
+  @extend .pageContainer;
+  background-color: $secondary-light;
+}
+
+.pageTitle {
+  margin-bottom: 50px;
+}
+
+.pageTitleDark {
+  @extend .pageTitle;
+  color: $secondary-light;
+}
+
+.pageTitleLight {
+  @extend .pageTitle;
+  color: $primary-dark;
+}
+
+.formContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form {
+  width: 100%;
+  height: fit-content;
+
+  @include lg {
+    width: 500px;
+  }
+}
+
+.descriptionContainer {
+  display: none;
+  @include lg {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+.descriptionContainerDark {
+  @extend .descriptionContainer;
+  @include lg {
+    background-color: $accent-black-mid;
+  }
+}
+
+.descriptionContainerLight {
+  @extend .descriptionContainer;
+  @include lg {
+    background-color: $primary-dark;
+  }
+}
+
+.highlighted {
+  color: $accent-orange-light;
+}
+
+.description {
+  text-align: center;
+  font-size: 30px;
+  width: 500px;
+  margin-bottom: 50px;
+  line-height: 1.5;
+  color: $secondary-light;
+}
