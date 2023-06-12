@@ -1,0 +1,20 @@
+@import "@jokejunction/styles/theme.scss";
+
+.hintIcon {
+  border-radius: 8px;
+  width: 80%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hintIconDark {
+  @extend .hintIcon;
+  background-color: $accent-black-moderate;
+}
+
+.hintIconLight {
+  @extend .hintIcon;
+  background-color: $secondary;
+}

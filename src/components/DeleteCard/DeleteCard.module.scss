@@ -1,0 +1,47 @@
+@import "@jokejunction/styles/theme.scss";
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContainer {
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.modalContainerDark {
+  @extend .modalContainer;
+  background-color: $primary;
+}
+
+.modalContainerLight {
+  @extend .modalContainer;
+  background-color: $secondary-light;
+}
+
+.modalCard {
+  margin-bottom: 20px;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 50px;
+}
+
+.modalButtons button {
+  margin-left: 10px;
+}
+
+.confirmText {
+  font-size: 18px;
+  line-height: 1.8;
+}

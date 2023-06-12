@@ -1,0 +1,27 @@
+@import "@jokejunction/styles/theme.scss";
+
+.hintText {
+  border-radius: 8px;
+  width: 80%;
+  height: 50%;
+  padding: 30px;
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
+
+  p {
+    @extend .h3;
+    line-height: 1.6;
+    font-weight: bold;
+  }
+}
+
+.hintTextDark {
+  @extend .hintText;
+  background-color: $accent-black-moderate;
+}
+
+.hintTextLight {
+  @extend .hintText;
+  background-color: $secondary-light;
+}

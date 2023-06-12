@@ -1,0 +1,120 @@
+@import "@jokejunction/styles/theme.scss";
+
+.backButton {
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.backButtonDark {
+  @extend .backButton;
+  color: $accent-orange-moderate;
+}
+.backButtonLight {
+  @extend .backButton;
+  color: $primary-dark;
+}
+
+.formContent {
+  @include lg {
+    flex: 2;
+    padding-left: 80px;
+  }
+}
+
+.formContentDark {
+  @extend .formContent;
+
+  @include lg {
+    background-color: $accent-black-moderate;
+  }
+}
+
+.formContentLight {
+  @extend .formContent;
+
+  @include lg {
+    background-color: $secondary-light;
+  }
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  padding-top: 20px;
+
+  @include lg {
+    text-align: left;
+    padding-left: 50px;
+  }
+}
+
+.headerDark {
+  @extend .header;
+  color: $tertiary;
+}
+
+.headerLight {
+  @extend .header;
+  color: $primary;
+}
+
+.navigation {
+  padding-top: 20px;
+
+  @include sm {
+    padding: 10px 0px;
+  }
+}
+
+.pageContainer {
+  @include lg {
+    display: flex;
+  }
+}
+
+.hintContent {
+  display: none;
+  @include lg {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.formCard {
+  box-shadow: 0 1px 4px hsla(0, 0%, 0.8);
+
+  @include sm {
+    width: 70%;
+  }
+
+  @include lg {
+    box-shadow: none;
+    width: 700px;
+  }
+}
+
+.cardContent {
+  padding: 0 50px 30px 50px;
+}
+
+.formContainer {
+  padding-top: 30px;
+
+  @include sm {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+  }
+
+  @include lg {
+    justify-content: flex-start;
+    align-items: center;
+    height: 80vh;
+    min-width: 500px;
+  }
+}
