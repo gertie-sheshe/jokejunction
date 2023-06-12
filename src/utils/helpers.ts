@@ -50,20 +50,10 @@ export const createParams = (
   } else if (filter === "lowestViews") {
     params.append("views_lte", "25");
   } else if (filter === "today") {
-    const today = new Date();
-    const startOfDay = new Date(
-      today.getFullYear(),
-      today.getMonth(),
-      today.getDate()
-    );
-    const endOfDay = new Date(
-      today.getFullYear(),
-      today.getMonth(),
-      today.getDate() + 1
-    );
+    const date = new Date();
+    const timestamp = date.getTime();
 
-    params.append("createdAt_gte", startOfDay.toISOString());
-    params.append("createdAt_lt", endOfDay.toISOString());
+    params.append("createdAt_gte", timestamp.toString());
   }
 
   return params;
