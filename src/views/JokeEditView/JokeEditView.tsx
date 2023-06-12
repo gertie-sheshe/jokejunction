@@ -3,6 +3,8 @@ import useTheme from "@jokejunction/hooks/useTheme";
 import JokeForm from "@jokejunction/components/JokeForm";
 import HintText from "@jokejunction/components/HintText";
 import HintIcon from "@jokejunction/components/HintIcon";
+import { createJoke, updateJoke } from "@jokejunction/utils/api";
+import { useMutation } from "@tanstack/react-query";
 
 import { useRouter } from "next/router";
 import { Joke } from "@jokejunction/types";
@@ -19,13 +21,30 @@ const JokeEditView: React.FC<JokeEditViewProps> = ({ heading, jokeData }) => {
 
   const router = useRouter();
 
+  const createMutation = useMutation(createJoke);
+  const editMutation = useMutation(updateJoke);
+
   const handleCreateSubmit = async (
     event: FormEvent,
     formValues: Pick<Joke, "title" | "author" | "body">
   ) => {
     event.preventDefault();
 
-    router.back();
+    try {
+      const { title, author, body } = formValues;
+      const date = new Date();
+      const timestamp = date.getTime();
+      await createMutation.mutateAsync({
+        title,
+        author,
+        body,
+        createdAt: timestamp,
+      });
+
+      router.back();
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const handleEditSubmit = async (
@@ -33,7 +52,16 @@ const JokeEditView: React.FC<JokeEditViewProps> = ({ heading, jokeData }) => {
     formValues: Pick<Joke, "title" | "author" | "body">
   ) => {
     event.preventDefault();
-    router.back();
+    try {
+      const { title, author, body } = formValues;
+      const id = jokeData?.id || 0;
+
+      await editMutation.mutateAsync({ id, data: { title, author, body } });
+
+      router.back();
+    } catch (error) {
+      console.error("Failed to update joke:", error);
+    }
   };
 
   const handleGoBack = () => {

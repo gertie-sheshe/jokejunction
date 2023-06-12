@@ -1,24 +1,21 @@
 import Head from "next/head";
 
 import React from "react";
+import { dehydrate, QueryClient, useQuery } from "@tanstack/react-query";
 
 import Container from "@jokejunction/layout/Container/Container";
 import { useRouter } from "next/router";
 
 import Page from "@jokejunction/layout/Page";
 import JokeEditView from "@jokejunction/views/JokeEditView";
+import { getJokeById } from "@jokejunction/utils/api";
+import { JOKE_BY_ID_KEY } from "@jokejunction/utils/queryKeys";
 
 export default function EditJoke() {
   const router = useRouter();
+  const { id } = router.query;
 
-  const data = {
-    title: "Road Trips",
-    author: "melis@we.com",
-    body: "This is a joke",
-    views: 100,
-    createdAt: 1623421317413,
-    id: 1,
-  };
+  const { data } = useQuery(JOKE_BY_ID_KEY(id), () => getJokeById(id));
 
   return (
     <>
@@ -37,4 +34,20 @@ export default function EditJoke() {
       </Page>
     </>
   );
+}
+
+export async function getServerSideProps({ params }) {
+  const { id } = params;
+
+  const queryClient = new QueryClient();
+
+  await queryClient.prefetchQuery(JOKE_BY_ID_KEY(id), () =>
+    getJokeById(Number(id))
+  );
+
+  return {
+    props: {
+      dehydratedState: dehydrate(queryClient),
+    },
+  };
 }

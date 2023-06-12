@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import { useQuery } from "@tanstack/react-query";
 
 import useScreenSize from "@jokejunction/hooks/useScreenSize";
 
 import MobileTable from "@jokejunction/components/Table/MobileTable";
 import AccessibleTable from "@jokejunction/components/Table/AccessibleTable";
 import TableActionBar from "@jokejunction/components/TableActionBar";
+import { getJokes } from "@jokejunction/utils/api";
+import { JOKE_PAGINATE_KEY } from "@jokejunction/utils/queryKeys";
 
 import styles from "./TableContainer.module.scss";
 import { Joke } from "@jokejunction/types";
@@ -47,6 +50,22 @@ const TableContainer: React.FC<TableContainerProps> = ({
   if (filter !== undefined) {
     queryArray.push(filter);
   }
+
+  const { data } = useQuery(
+    [JOKE_PAGINATE_KEY(queryArray)],
+    () => getJokes(Number(page), Number(perPage), sort, filter),
+    {
+      enabled: page !== undefined && perPage !== undefined,
+      keepPreviousData: true,
+    }
+  );
+
+  useEffect(() => {
+    // updates data based on what the URL displays
+    if (data) {
+      setJokesData(data);
+    }
+  }, [data]);
 
   return (
     <>

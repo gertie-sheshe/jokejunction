@@ -1,4 +1,6 @@
 import React from "react";
+import { deleteJoke } from "@jokejunction/utils/api";
+import { useMutation } from "@tanstack/react-query";
 import { useRouter } from "next/router";
 
 import useTheme from "@jokejunction/hooks/useTheme";
@@ -18,11 +20,20 @@ const DeleteCard: React.FC<DeleteCardProps> = ({
   const { isDarkMode } = useTheme();
   const router = useRouter();
 
+  const deleteMutation = useMutation(deleteJoke);
+
   const handleDelete = async (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
     event.preventDefault();
-    router.back();
+    try {
+      await deleteMutation.mutateAsync(jokeId);
+
+      router.back();
+      onDelete();
+    } catch (error) {
+      console.error("Failed to update joke:", error);
+    }
   };
   return (
     <div className={styles.modalOverlay}>
