@@ -29,7 +29,7 @@ To run the application locally, follow the instructions below:
 - React Query
 - 
 ### Screenshots
-[![Screenshot-2023-06-12-at-13-33-29.png](https://i.postimg.cc/HWMnxPZT/Screenshot-2023-06-12-at-13-33-29.png)](https://postimg.cc/4nJs2wR0)
+[![Screenshot-2023-06-12-at-13-33-29.png](https://i.postimg.cc/J7kc7bW8/Screenshot-2023-06-12-at-13-33-29.png)](https://postimg.cc/23CB2L69)
 [![Screenshot-2023-06-12-at-13-33-43.png](https://i.postimg.cc/Gtvm5H84/Screenshot-2023-06-12-at-13-33-43.png)](https://postimg.cc/645K76hK)
 [![Screenshot-2023-06-12-at-11-47-13.png](https://i.postimg.cc/hjzjVCKb/Screenshot-2023-06-12-at-11-47-13.png)](https://postimg.cc/LYS2p3Yn)
 [![Screenshot-2023-06-12-at-13-33-56.png](https://i.postimg.cc/MK8TjbNV/Screenshot-2023-06-12-at-13-33-56.png)](https://postimg.cc/0rcxTm8y)
